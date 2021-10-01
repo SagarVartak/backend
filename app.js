@@ -2,7 +2,11 @@ var express = require("express");
 var axios = require("axios");
 const { response } = require("express");
 const app = express();
-app.get("/", async (req, res) => {
+
+app.get("/", (req,res)=>{
+  res.send("welcome");
+})
+app.get("/data", async (req, res) => {
     // res.send("Welcome");
     var newdata = await axios.get("https://api.imagekit.io/v1/files",{
         auth:{
