@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node app.js"
   },
+  "engines": {
+    "node": "10.14"
+  },
   "author": "ShAaGGy",
   "license": "ISC",
   "dependencies": {
