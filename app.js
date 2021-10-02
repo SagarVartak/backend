@@ -1,8 +1,10 @@
 var express = require("express");
 var axios = require("axios");
+var cors = require("cors");
 const { response } = require("express");
 const app = express();
 
+app.use(cors())
 app.get("/", (req,res)=>{
   res.send("welcome");
 })
@@ -26,7 +28,7 @@ app.get("/data", async (req, res) => {
         console.log(err);
     })
     console.log(newdata);
-    res.json(newdata);
+    res.send(newdata);
   });
   
   app.listen(process.env.PORT || 3000, function () {
